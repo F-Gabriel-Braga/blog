@@ -1,8 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const connection = require('./database/database');
-const categoriesController =  require('./controllers/CategoryController');
-const articlesController =  require('./controllers/ArticleController');
+const categoriesController =  require('./categories/CategoryController');
+const articlesController =  require('./articles/ArticleController');
 
 const app = express();
 const port = 3000;
