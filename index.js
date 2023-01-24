@@ -4,6 +4,9 @@ const connection = require('./database/database');
 const categoriesController =  require('./categories/CategoryController');
 const articlesController =  require('./articles/ArticleController');
 
+const Article = require('./articles/Article');
+const Category = require('./categories/Category');
+
 const app = express();
 const port = 3000;
 
