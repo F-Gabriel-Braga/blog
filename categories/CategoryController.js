@@ -17,7 +17,7 @@ router.post("/categories/save", (req, res) => {
     if(title != undefined) {
         Category.create({ title, slug: slugify(title) })
         .then(() => {
-            res.redirect("/");
+            res.redirect("/admin/categories");
         });
     }
     else {
