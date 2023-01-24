@@ -21,13 +21,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                        </tr>
+                        <% categories.forEach(category => { %> 
+                            <tr>
+                                <td><%= category.id %></td>
+                                <td><%= category.title %></td>
+                                <td><%= category.slug %></td>
+                                <td>
+                                    <a href="/">
+                                        <span class="material-symbols-outlined">edit</span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="/">
+                                        <span class="material-symbols-outlined">delete</span>
+                                    </a>
+                                </td>
+                            </tr>
+                        <% }) %> 
                     </tbody>
                 </table>
             </div>
