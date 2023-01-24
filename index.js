@@ -10,6 +10,10 @@ const Category = require('./categories/Category');
 const app = express();
 const port = 3000;
 
+// body parser
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 // routes
 app.use("/", categoriesController);
 app.use("/", articlesController);
@@ -19,10 +23,6 @@ app.set('view engine', 'ejs');
 
 // static
 app.use(express.static('public'))
-
-// body parser
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
 // database
 connection.authenticate()
